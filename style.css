@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    min-height: 100vh;
+    background: #2b2baa;
+    /*background: #43A047;*/
+    overflow: hidden;
+}
+
+.container{
+    width: 400px;   
+    background: #fff;
+    border-radius: 8px;
+    /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);*/ 
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+
+}
+
+.container h2{
+    font-weight: 600;
+    font-size: 1.31rem;
+    padding: 1rem 1.75rem;
+    border-bottom: 1px solid #d4dbe5;
+}
+h2 {
+    text-align: center;
+}
+
+.wrapper{
+    /*margin: 1.25rem 1.75rem;*/
+    position: relative;
+    width: 400px;
+    height: 450px;
+    /*border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;*/
+    padding: 0px 20px ;    
+
+}
+
+.wrapper .input-box{
+    position: relative;
+   
+}
+
+.input-box input{
+    width: 100%;
+    height: 53px;
+    color: #000;
+    /*background: none;*/   
+    font-size: 1.06rem;
+    font-weight: 500;
+    border-radius: 4px;
+    letter-spacing: 1.4px;
+    border: 1px solid #aaa;
+    padding: 0 2.85rem 0 1rem;
+}
+
+.input-box span{
+    position: absolute;
+    right: 13px;
+    cursor: pointer;
+    line-height: 53px;
+    color: #e0bbbb;
+    font-size: medium;
+}
+
+.input-box span:hover{
+    color: #43A047 !important;
+}
+
+.wrapper .pass-indicator{
+    width: 100%;
+    height: 4px;
+    position: relative;
+    margin-top: 0.75rem;
+    border-radius: 25px;
+}
+
+.pass-indicator::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    border-radius: inherit;
+    transition: width 0.3s ease;
+}
+
+.pass-indicator#weak::before{
+    width: 20%;
+    background: #e64a4a;
+}
+
+.pass-indicator#medium::before{
+    width: 50%;
+    background: #f1c80b;
+}
+
+.pass-indicator#strong::before{
+    width: 100%;
+    background: #43A047;
+}
+
+.wrapper .pass-length{
+    margin: 1.56rem 0 1.25rem;
+}
+
+.pass-length .details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pass-length input{
+    width: 100%;
+    height: 5px;
+}
+
+.pass-settings .options{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.pass-settings .options .option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: calc(100% / 2);
+}
+
+.options .option:first-child{
+    pointer-events: none;
+}
+
+.options .option:first-child input{
+    opacity: 0.7;
+}
+
+.options .option input{
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+
+.options .option label{
+    cursor: pointer;
+    color: #f23131;
+    padding-left: 0.63rem;
+}
+
+.wrapper .generate-btn{
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #2521e2;
+    font-size: 1.06rem;
+    padding: 0.94rem 0;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin: 0.94rem 0 1.3rem;
+}
+
+.globo {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(180deg, rgba(108, 184, 255, 0.42) 31.77%, #5c9df1 100%);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    transform: translate(-100px, -50px) rotate(-90deg);
+    transition: 1s cubic-bezier(.07, .8, .16, 1);
+    animation: animatedglobo 20s infinite alternate;
+
+}
+
+.globo:hover{
+    width: 520px;
+    height: 520px;
+    filter: blur(30px);
+    box-shadow:
+        inset 0 0 0 5px rgba(255, 255, 255, 0.6),
+        inset 100px 100px 0 0 #fa709a,
+        inset 200px 200px 0 0 #784ba8,
+        inset 300px 300px 0 0 #2b86c5;
+
+}
+
+@keyframes animatedglobo {
+    100% {
+        transform: translate(300px, 50px) rotate(-10deg);
+        border-radius: 76% 24% 33% 67% / 68% 55% 45% 32% ;
+    }
+}
